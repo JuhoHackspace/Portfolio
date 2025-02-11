@@ -2,7 +2,8 @@
     import { onMount } from 'svelte';
     import { page } from '$app/stores';
     import { derived } from 'svelte/store';
-  
+    import{ base } from '$app/paths';
+
     const currentPath = derived(page, $page => $page.url.pathname);
     let showMenu = $state(false)
 
@@ -95,8 +96,8 @@
 <div class="transparent-bg nav-container">
     <nav class="header-nav">
         <ul>
-            <li><a href="/" class={$currentPath === '/' ? 'active' : ''}>Who am I?</a></li>
-            <li><a href="/myWork" class={$currentPath === '/myWork' ? 'active' : ''}>My Work</a></li>
+            <li><a href="{base}/" class={$currentPath === '/' ? 'active' : ''}>Who am I?</a></li>
+            <li><a href="{base}/myWork" class={$currentPath === '/myWork' ? 'active' : ''}>My Work</a></li>
         </ul>
         <button class="hamburger" on:click={toggleMenu}>
             {#if showMenu}
@@ -108,8 +109,8 @@
     </nav>
     {#if showMenu}
         <div class="mobile-menu">
-            <a href="/" class={$currentPath === '/' ? 'active' : ''} on:click={toggleMenu}>Who am I?</a>
-            <a href="/myWork" class={$currentPath === '/myWork' ? 'active' : ''} on:click={toggleMenu}>My Work</a>
+            <a href="{base}/" class={$currentPath === '/' ? 'active' : ''} on:click={toggleMenu}>Who am I?</a>
+            <a href="{base}/myWork" class={$currentPath === '/myWork' ? 'active' : ''} on:click={toggleMenu}>My Work</a>
         </div>
     {/if}
 </div>

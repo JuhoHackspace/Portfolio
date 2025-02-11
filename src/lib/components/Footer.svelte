@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import GitHub from '$lib/assets/GitHub2.png';
     import LinkedIn from '$lib/assets/LinkedIn.png';
   </script>
@@ -30,10 +31,10 @@
     </div>
     <div class="footer-links center-all">
         <a href="https://github.com/JuhoHackspace" target="_blank" rel="noopener noreferrer">
-        <img src={GitHub} alt="GitHub Profile" />
+        <img src={`${base}${GitHub}`} alt="GitHub Profile" />
         </a>
         <a href="https://www.linkedin.com/in/juho-hietala-92a4b52b8" target="_blank" rel="noopener noreferrer">
-        <img src={LinkedIn} alt="LinkedIn Profile" />
+        <img src={`${base}${GitHub}`} alt="LinkedIn Profile" />
         </a>
     </div>
 </div>

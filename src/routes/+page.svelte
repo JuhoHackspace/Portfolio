@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import picture from '$lib/assets/kuva.jpg';
     import skills from '$lib/assets/skills.js';
@@ -40,7 +41,7 @@
 <div class="container">
     <div class="main-changing-layout">
         <div class="image-container">
-            <img src={picture} alt="Placeholder" />
+            <img src={`${base}${picture}`} alt="Placeholder" />
         </div>
         <div class="vertical-layout max-width-600 text-center">
             <h1 class="header name">Juho Hietala</h1>

@@ -10,7 +10,7 @@
     function openLink(url) {
         window.open(url, '_blank');
     }
-    
+    import { base } from '$app/paths';
     import githubLogo from '$lib/assets/GitHub2.png';
     import webLogo from '$lib/assets/Web2.png';
     import Muuvit from '$lib/assets/Muuvit.png';
@@ -132,7 +132,7 @@
         {:else}
         <div class="video-picture-container">
             {#if imageURI.length > 0}
-                <img src={pictures[imageURI[currentImageIndex]]} alt={title} />
+                <img src={`${base}${pictures[imageURI[currentImageIndex]]}`} alt={title} />
                 {#if imageURI.length > 1}
                     <div class="button-container">
                         <button class="slider-button left" on:click={prevImage}>&lt;</button>
@@ -149,7 +149,7 @@
         <div class="horizontal-layout center-all transparent">
             <h3 class="header outer-05em">Available on</h3>
         {#each availableOn as platform}
-            <img class="logo" src={platformLogos[platform.name]} alt={platform.name} on:click={() => openLink(platform.url)}/>
+            <img class="logo" src={`${base}${platformLogos[platform.name]}`} alt={platform.name} on:click={() => openLink(platform.url)}/>
         {/each}
         </div>
         {/if}
