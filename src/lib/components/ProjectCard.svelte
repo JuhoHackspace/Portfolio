@@ -52,7 +52,7 @@
         transition: transform 0.3s, box-shadow 0.3s;
         max-width: 400px;
         min-width: 300px;
-        min-height: 650px;
+        min-height: 800px;
     }
     .card-container:hover {
         transform: translateY(-10px);
@@ -61,11 +61,6 @@
     @media (max-width: 640px) {
         .card-container {
             margin: 1em auto;
-        }
-    }
-    @media (min-width: 1500px) {
-        .card-container {
-            min-height: 800px;
         }
     }
     .video-picture-container {

@@ -57,10 +57,6 @@ time, mark, audio, video {
     /*background-color: green;*/
 }
 
-.main-changing-layout {
-    display: flex;
-}
-
 .vertical-layout {
     display: flex;
     flex-direction: column;
@@ -128,10 +124,6 @@ h2 {
 }
 
 @media (max-width: 900px) {
-    .main-changing-layout {
-        flex-direction: column;
-        align-items: center;
-    }
     .intro-text {
         font-size: 1em;
         padding: 1em;
