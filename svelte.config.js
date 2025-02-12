@@ -9,12 +9,12 @@ export default {
       strict: false // Ignore the error for dynamic routes
     }),
     paths: {
-      base: process.env.NODE_ENV === 'production' ? '/Portfolio' : ''
+      base: ''
     },
     prerender: {
       handleHttpError: ({ path, referrer, message }) => {
         // Ignore 404 errors for paths that do not begin with the base path
-        if (path.startsWith('/Portfolio')) {
+        if (path.startsWith('')) {
           return;
         }
         throw new Error(message);
