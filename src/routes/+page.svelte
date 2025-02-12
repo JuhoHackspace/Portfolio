@@ -7,13 +7,13 @@
 <style>
     .image-container {
         display: flex;
-        width: 50%;
-        height: 70vh;
         justify-content: center;
+        align-items: flex-start;
+        width: 50%;
     }
     img {
-        width: auto;
-        height: auto;
+        width: 400px;
+        object-fit: contain;
         border-radius: 50%;
         margin-left: 1em;
     }
@@ -25,7 +25,6 @@
     @media (max-width: 900px) {
         .image-container {
             width: 100%;
-            height: 50vh;
         }
         img {
             width: 100%;

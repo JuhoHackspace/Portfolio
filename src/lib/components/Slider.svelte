@@ -4,7 +4,8 @@
 	import {fly} from 'svelte/transition';
     import skills from '$lib/assets/skills.js';
 	let show = true;
-	let options = {duration: 1000, easing: linear};
+	let options = {duration: 1800, easing: linear};
+    const intervalduration = 3000;
     let currentIndex = 0;
     let viewportWidth = 0;
     onMount(() => {
@@ -18,7 +19,7 @@
         if (!show) {
             currentIndex = ( currentIndex + 1 ) % skills.length; 
         }
-    }, 2000);
+    }, intervalduration);
 
     return () => {
         clearInterval(interval);
